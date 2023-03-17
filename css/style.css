@@ -34,3 +34,6 @@ main {
   height: 9rem;
   border: solid;
 }
+.checkedIconHide {
+  display: none;
+}

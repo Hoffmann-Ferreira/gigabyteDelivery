@@ -12,44 +12,99 @@
     <header>
       <div><h1 class="title">Giga Byte Delivery</h1></div>
     </header>
+
     <main>
       <section id="lunche">
         <h4 class="category">lunches</h4>
         <div class="containerCard">
-          <div class="card">
+          <div id="lunch1" class="card" onclick="selectFood(1, 'checkedIcon1')">
             <figure>
               <img src="image.jpg" alt="exemple image" />
             </figure>
             <h3>Hamburguer</h3>
             <p>Brioche bread, beef steak, 150g, salad and cheese</p>
+            <img id="checkedIcon1" class="checkedIconHide" src="./images/checked.png" alt="selected item symbol">
+          </div>
+          <div id="lunch2" class="card" onclick="selectFood(2, 'checkedIcon2')">
+            <figure>
+              <img src="image.jpg" alt="exemple image" />
+            </figure>
+            <h3>Hamburguer</h3>
+            <p>Brioche bread, beef steak, 150g, salad and cheese</p>
+            <img id="checkedIcon2" class="checkedIconHide" src="./images/checked.png" alt="selected item symbol">
+          </div>
+          <div id="lunch3" class="card" onclick="selectFood(3, 'checkedIcon3')">
+            <figure>
+              <img src="image.jpg" alt="exemple image" />
+            </figure>
+            <h3>Hamburguer</h3>
+            <p>Brioche bread, beef steak, 150g, salad and cheese</p>
+            <img id="checkedIcon3" class="checkedIconHide" src="./images/checked.png" alt="selected item symbol">
           </div>
         </div>
       </section>
+
       <section id="drink">
         <h4 class="category">drink</h4>
         <div class="containerCard">
-          <div class="card">
+          <div id="drink1" class="card" onclick="selectDrink(1,'checkedIcon4')">
             <figure>
               <img src="image.jpg" alt="exemple image" />
             </figure>
             <h3>Hamburguer</h3>
             <p>Brioche bread, beef steak, 150g, salad and cheese</p>
+            <img id="checkedIcon4" class="checkedIconHide" src="./images/checked.png" alt="selected item symbol">
+          </div>
+          <div id="drink2" class="card" onclick="selectDrink(2, 'checkedIcon5')">
+            <figure>
+              <img src="image.jpg" alt="exemple image" />
+            </figure>
+            <h3>Hamburguer</h3>
+            <p>Brioche bread, beef steak, 150g, salad and cheese</p>
+            <img id="checkedIcon5" class="checkedIconHide" src="./images/checked.png" alt="selected item symbol">
+          </div>
+          <div id="drink3" class="card" onclick="selectDrink(3, 'checkedIcon6')">
+            <figure>
+              <img src="image.jpg" alt="exemple image" />
+            </figure>
+            <h3>Hamburguer</h3>
+            <p>Brioche bread, beef steak, 150g, salad and cheese</p>
+            <img id="checkedIcon6" class="checkedIconHide" src="./images/checked.png" alt="selected item symbol">
           </div>
         </div>
       </section>
-      <section id="dessert">
+
+      <section id="dessert" >
         <h4 class="category">dessert</h4>
         <div class="containerCard">
-          <div class="card">
+          <div id="dessert1" class="card" onclick="selectDessert(1, 'checkedIcon7')">
             <figure>
               <img src="image.jpg" alt="exemple image" />
             </figure>
             <h3>Hamburguer</h3>
             <p>Brioche bread, beef steak, 150g, salad and cheese</p>
+            <img id="checkedIcon7" class="checkedIconHide" src="./images/checked.png" alt="selected item symbol">
+          </div>
+          <div id="dessert2" class="card" onclick="selectDessert(2, 'checkedIcon8')">
+            <figure>
+              <img src="image.jpg" alt="exemple image" />
+            </figure>
+            <h3>Hamburguer</h3>
+            <p>Brioche bread, beef steak, 150g, salad and cheese</p>
+            <img id="checkedIcon8" class="checkedIconHide" src="./images/checked.png" alt="selected item symbol">
+          </div>
+          <div id="dessert3" class="card" onclick="selectDessert(3, 'checkedIcon9')">
+            <figure>
+              <img src="image.jpg" alt="exemple image" />
+            </figure>
+            <h3>Hamburguer</h3>
+            <p>Brioche bread, beef steak, 150g, salad and cheese</p>
+            <img id="checkedIcon9" class="checkedIconHide" src="./images/checked.png" alt="selected item symbol">
           </div>
         </div>
       </section>
     </main>
     <footer><h5>developed by Andrei</h5></footer>
+    <script src="./js/main.js"></script>
   </body>
 </html>
