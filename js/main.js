@@ -11,6 +11,11 @@ let dessert1 = document.getElementById("dessert1");
 let dessert2 = document.getElementById("dessert2");
 let dessert3 = document.getElementById("dessert3");
 
+//price
+let priceLunch = "";
+let priceDrink = "";
+let priceDessert = ""; 
+
 // function select food;
 function selectFood(food, id) {
 
@@ -88,3 +93,39 @@ function selectDessert(dessert, id) {
         document.getElementById('checkedIcon8').classList.add("checkedIconHide");
     }
 };
+
+//function add price
+
+function addPriceFood (food) {
+    priceLunch = document.getElementById(food).textContent;
+    let price = priceLunch.replace('R$ ', '').replace(',', '.');
+    price = parseFloat(price);
+    priceLunch = price;
+return priceLunch;
+};
+
+function addPriceDrink (drink) {
+    priceDrink = document.getElementById(drink).textContent;
+    let price = priceDrink.replace('R$ ', '').replace(',', '.');
+    price = parseFloat(price);
+    priceDrink = price
+    return priceDrink;
+};
+
+function addPriceDessert (dessert) {
+    priceDessert = document.getElementById(dessert).textContent;
+    let price = priceDessert.replace('R$ ', '').replace(',', '.');
+    price = parseFloat(price);
+    priceDessert = price;
+    return priceDessert;
+}
+//function sum prices
+
+function sumPrices(lunch, drink, dessert) {
+    lunch = priceLunch;
+    drink =  priceDrink;
+    dessert = priceDessert;
+
+    console.log(lunch + drink + dessert);
+}
+
