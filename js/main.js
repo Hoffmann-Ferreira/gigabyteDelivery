@@ -15,6 +15,7 @@ let dessert3 = document.getElementById("dessert3");
 let priceLunch = "";
 let priceDrink = "";
 let priceDessert = "";
+let totalOrderAmount = 0;
 
 //select snack
 let snackLunch = "";
@@ -26,6 +27,7 @@ let counter = 0;
 
 // function select food;
 function selectFood(food, id) {
+  counter += 1;
   if (food === 1) {
     lunch1.style.border = "2px solid green";
     lunch2.style.border = "none";
@@ -36,7 +38,6 @@ function selectFood(food, id) {
     document
       .getElementById("checkedLunche")
       .classList.remove("selectcheckedIcon");
-    counter += 1;
     snackLunch = document.getElementById("name1").textContent;
     return snackLunch;
   } else if (food === 2) {
@@ -49,7 +50,6 @@ function selectFood(food, id) {
     document
       .getElementById("checkedLunche")
       .classList.remove("selectcheckedIcon");
-    counter += 1;
     snackLunch = document.getElementById("name2").textContent;
     return snackLunch;
   } else if (food === 3) {
@@ -62,13 +62,13 @@ function selectFood(food, id) {
     document
       .getElementById("checkedLunche")
       .classList.remove("selectcheckedIcon");
-    counter += 1;
     snackLunch = document.getElementById("name3").textContent;
     return snackLunch;
   }
 }
 // function select drink;
 function selectDrink(drink, id) {
+  counter += 1;
   if (drink === 1) {
     drink1.style.border = "2px solid green";
     drink2.style.border = "none";
@@ -79,7 +79,6 @@ function selectDrink(drink, id) {
     document
       .getElementById("checkedDrink")
       .classList.remove("selectcheckedIcon");
-    counter += 1;
     snackDrink = document.getElementById("name4").textContent;
     return selectDrink;
   } else if (drink === 2) {
@@ -92,7 +91,6 @@ function selectDrink(drink, id) {
     document
       .getElementById("checkedDrink")
       .classList.remove("selectcheckedIcon");
-    counter += 1;
     snackDrink = document.getElementById("name5").textContent;
     return selectDrink;
   } else if (drink === 3) {
@@ -105,13 +103,13 @@ function selectDrink(drink, id) {
     document
       .getElementById("checkedDrink")
       .classList.remove("selectcheckedIcon");
-    counter += 1;
     snackDrink = document.getElementById("name6").textContent;
     return snackDrink;
   }
 }
 //function select dessert
 function selectDessert(dessert, id) {
+  counter += 1;
   if (dessert === 1) {
     dessert1.style.border = "2px solid green";
     dessert2.style.border = "none";
@@ -122,7 +120,6 @@ function selectDessert(dessert, id) {
     document
       .getElementById("checkedDessert")
       .classList.remove("selectcheckedIcon");
-    counter += 1;
     snackDessert = document.getElementById("name7").textContent;
     return snackDessert;
   } else if (dessert === 2) {
@@ -135,7 +132,6 @@ function selectDessert(dessert, id) {
     document
       .getElementById("checkedDessert")
       .classList.remove("selectcheckedIcon");
-    counter += 1;
     snackDessert = document.getElementById("name8").textContent;
     return snackDessert;
   } else if (dessert === 3) {
@@ -148,7 +144,6 @@ function selectDessert(dessert, id) {
     document
       .getElementById("checkedDessert")
       .classList.remove("selectcheckedIcon");
-    counter += 1;
     snackDessert = document.getElementById("name9").textContent;
     return snackDessert;
   }
@@ -181,18 +176,35 @@ function addPriceDessert(dessert) {
 }
 //function sum prices
 
-function sumPrices(lunch, drink, dessert) {
-  lunch = priceLunch;
-  drink = priceDrink;
-  dessert = priceDessert;
-
-  // console.log(lunch + drink + dessert);
-  console.log(counter);
+function sumPrices() {
+  totalOrderAmount = priceLunch + priceDrink + priceDessert;
+  console.log(totalOrderAmount);
+  return(totalOrderAmount);
 }
 
 function modalOrder() {
   if (counter >= 3) {
     let modal = document.getElementById("modalOrder");
-    modal.innerHTML = `<button>Fechar pedido</button>`;
+    modal.innerHTML = `<button onclick="modalCloseOder()">Fechar pedido</button>`;
   }
 }
+
+function modalCloseOder() {
+  sumPrices()
+  document.getElementById("snackOrder").innerHTML = `<div class="modalCloseOrder">
+  <div class="modalConfirmOrder">
+    <h3> Confirmar pedido</h3>
+    <p>${snackLunch}      R$:${priceLunch}</p>
+    <p>${snackDrink}      R$:${priceDrink}</p> 
+    <p>${snackDessert}    R$:${priceDessert}</p> 
+    <p>Total      R$:${totalOrderAmount}</p>
+    <div>
+    <button>Confirmar</button> <button onclick="hideModalOrder()">Cancelar</button>
+    </div>   
+  </div>
+</div>`;
+};
+
+function hideModalOrder(){
+  document.getElementById("snackOrder").style.display = "none";
+};
