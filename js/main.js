@@ -199,12 +199,30 @@ function modalCloseOder() {
     <p>${snackDessert}    R$:${priceDessert}</p> 
     <p>Total      R$:${totalOrderAmount}</p>
     <div>
-    <button>Confirmar</button> <button onclick="hideModalOrder()">Cancelar</button>
+    <button onclick="closedOder()">Confirmar</button> <button onclick="hideModalOrder()">Cancelar</button>
     </div>   
   </div>
 </div>`;
 };
 
+function closedOder(){
+  let name = prompt("Informe seu nome: ");
+  let adress = prompt("Informe seu endereço de entrega: ");
+  let mensagem;
+
+  mensagem = ` Olá, meu nome é ${name}, gostaria de fazer o seguinte pedido:
+  Lanche: ${snackLunch}, no valor de R$:${priceLunch};
+  Bebida: ${snackDrink}, no valor de R$:${priceDrink};
+  Sobremesa: ${snackDessert}, no valor de R$:${priceDessert};
+  O valor total do meu pedido foi R${totalOrderAmount};
+  O endereço de entrega é ${adress}.
+  `
+
+  window.open("https://wa.me/5532984179500?text="+encodeURI(mensagem));
+}
+
+
 function hideModalOrder(){
   document.getElementById("snackOrder").style.display = "none";
 };
+
