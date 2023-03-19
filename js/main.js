@@ -31,6 +31,7 @@ function selectFood(food, id) {
         document.getElementById(id).classList.remove("checkedIconHide");
         document.getElementById('checkedIcon2').classList.add("checkedIconHide");
         document.getElementById('checkedIcon3').classList.add("checkedIconHide");
+        document.getElementById('checkedLunche').classList.remove("selectcheckedIcon");
         snackLunch = document.getElementById("name1").textContent;
         return snackLunch;
         
@@ -41,6 +42,7 @@ function selectFood(food, id) {
         document.getElementById(id).classList.remove("checkedIconHide");
         document.getElementById('checkedIcon1').classList.add("checkedIconHide");
         document.getElementById('checkedIcon3').classList.add("checkedIconHide");
+        document.getElementById('checkedLunche').classList.remove("selectcheckedIcon");
         snackLunch = document.getElementById("name2").textContent;
         return snackLunch;
         
@@ -51,6 +53,7 @@ function selectFood(food, id) {
         document.getElementById(id).classList.remove("checkedIconHide");
         document.getElementById('checkedIcon1').classList.add("checkedIconHide");
         document.getElementById('checkedIcon2').classList.add("checkedIconHide");
+        document.getElementById('checkedLunche').classList.remove("selectcheckedIcon");
         snackLunch = document.getElementById("name3").textContent;
         return snackLunch;
     }
@@ -64,6 +67,7 @@ function selectDrink(drink, id) {
         document.getElementById(id).classList.remove("checkedIconHide");
         document.getElementById('checkedIcon5').classList.add("checkedIconHide");
         document.getElementById('checkedIcon6').classList.add("checkedIconHide");
+        document.getElementById('checkedDrink').classList.remove("selectcheckedIcon");
         snackDrink = document.getElementById("name4").textContent;
         return selectDrink;
     } else if(drink === 2) {
@@ -73,6 +77,7 @@ function selectDrink(drink, id) {
         document.getElementById(id).classList.remove("checkedIconHide");
         document.getElementById('checkedIcon4').classList.add("checkedIconHide");
         document.getElementById('checkedIcon6').classList.add("checkedIconHide");
+        document.getElementById('checkedDrink').classList.remove("selectcheckedIcon");
         snackDrink = document.getElementById("name5").textContent;
         return selectDrink;
     } else if(drink === 3) {
@@ -82,6 +87,7 @@ function selectDrink(drink, id) {
         document.getElementById(id).classList.remove("checkedIconHide");
         document.getElementById('checkedIcon4').classList.add("checkedIconHide");
         document.getElementById('checkedIcon5').classList.add("checkedIconHide");
+        document.getElementById('checkedDrink').classList.remove("selectcheckedIcon");
         snackDrink = document.getElementById("name6").textContent;
         return snackDrink;
     }
@@ -95,6 +101,7 @@ function selectDessert(dessert, id) {
         document.getElementById(id).classList.remove("checkedIconHide");
         document.getElementById('checkedIcon8').classList.add("checkedIconHide");
         document.getElementById('checkedIcon9').classList.add("checkedIconHide");
+        document.getElementById('checkedDessert').classList.remove("selectcheckedIcon");
         snackDessert =  document.getElementById("name7").textContent;
         return snackDessert
     } else if(dessert === 2) {
@@ -104,6 +111,7 @@ function selectDessert(dessert, id) {
         document.getElementById(id).classList.remove("checkedIconHide");
         document.getElementById('checkedIcon9').classList.add("checkedIconHide");
         document.getElementById('checkedIcon7').classList.add("checkedIconHide");
+        document.getElementById('checkedDessert').classList.remove("selectcheckedIcon");
         snackDessert =  document.getElementById("name8").textContent;
         return snackDessert
     } else if(dessert === 3) {
@@ -113,6 +121,7 @@ function selectDessert(dessert, id) {
         document.getElementById(id).classList.remove("checkedIconHide");
         document.getElementById('checkedIcon7').classList.add("checkedIconHide");
         document.getElementById('checkedIcon8').classList.add("checkedIconHide");
+        document.getElementById('checkedDessert').classList.remove("selectcheckedIcon");
         snackDessert =  document.getElementById("name9").textContent;
         return snackDessert
     }
@@ -154,5 +163,10 @@ function sumPrices(lunch, drink, dessert) {
     console.log('lunch: ',snackLunch, 'drink: ', snackDrink, 'sobbrimesa: ', snackDessert );
 };
 
+function modalOrder () {
+    let modal = document.getElementById("modalOrder");
+    modal.innerHTML = `<p class="modal"> Para fechar o seu pedido, selecione uma lanche, uma beida e uma sobremesa</p>`;
 
+
+}
 
