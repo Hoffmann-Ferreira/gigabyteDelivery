@@ -1,38 +1,100 @@
 header {
   width: 98.9vw;
-  height: 13rem;
-  border: solid;
+  height: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #B10406;
+  
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  font-family: 'Lobster', cursive;
+  color: #FFFFFF;
+  font-size: 2em;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px #000000;
+}
+
+header figure {
+  width: 13rem;
+  height: 8rem;
+  margin-left: 1rem;
+
+}
+header img {
+  width: 100%;
+  height: 100%;
+}
+header h3{
+  margin-left: 1rem;
 }
 
 main {
   width: 98.9vw;
-  border: solid yellow;
+  background-color: #f8f9fa;
+  padding: 1rem;
+}
+main h4 {
+  font-family: 'Lobster', cursive;
+  margin-left: 20rem;
+  font-size: 1.2em;
+}
+
+#orderCheckout {
+  width: 15rem;
+  text-align: left;
+  font-family: 'Varela Round', sans-serif;
+  position: fixed;
+  padding: 1rem;
+  top: 1;
+  border: solid;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#orderCheckout p {
+  text-align: left;
+  border: solid;
+  width: 12rem;
 }
 
 #lunche,
 #drink,
 #dessert {
   width: 100%;
-  height: 13rem;
-  border: solid;
+  height: 25rem;
   display: flex;
   flex-direction: column;
+  margin-bottom: 1rem;
 }
 .containerCard {
   width: 100%;
   height: 90%;
-  border: solid blue;
+  background-color: #FFFFFF;
   display: flex;
   justify-content: center;
   align-items: center;
+  
+  
 }
 .card {
-  width: 9rem;
-  height: 9rem;
-  border: solid;
+  width: 15rem;
+  height: 20rem;
+  border: solid 1px #d3d4d5;
+  border-radius: 13px;
+  margin-left: 3rem;
+
+}
+.card figure {
+  width: 100%;
+  height: 12rem;
+  border-radius: 10px;
+}
+.card figure img {
+  width: 100%;
+  height: 12rem;
+  border-radius: 10px;
+  object-fit: cover;
+
 }
 .checkedIconHide, .selectcheckedIcon {
   display: none;
@@ -49,6 +111,7 @@ main {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  z-index: 1;
 }
 .modalConfirmOrder{
   border: solid yellow;
@@ -59,4 +122,18 @@ main {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+
+footer{
+  width: 98.9vw;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #B10406;
+  font-family: 'Varela Round', sans-serif;
+  color: #FFFFFF;
+  font-size: 1em;
+  margin-top: 1rem;
+  text-shadow: 2px 2px 5px #000000;
 }
