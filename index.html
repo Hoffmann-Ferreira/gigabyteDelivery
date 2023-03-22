@@ -5,64 +5,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GIGA Byte Delivery</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/images/fast-food.png"
+    />
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <h2>Giga Byte</h2>
       <h3>Delivery</h3>
-      <figure> 
-        <img src="images/Logo.png" alt="logo"/>
+      <figure>
+        <img src="images/Logo.png" alt="logo" />
       </figure>
     </header>
 
     <main>
       <div id="orderCheckout">
         <p>Faça seu pedido!</p>
-        <p id="checkedLunche"  class="selectcheckedIcon">Selecione um lanche <img src="./images/checked.png"></p>
-        <p id="checkedDrink"  class="selectcheckedIcon">Uma bebida <img  src="./images/checked.png"></p>
-        <p id="checkedDessert"  class="selectcheckedIcon">E uma sobremesa <img  src="./images/checked.png"></p>
-       <div id="modalOrder"></div>
+        <p id="checkedLunche" class="selectcheckedIcon">
+          Selecione um lanche <img src="./images/checked.png" />
+        </p>
+        <p id="checkedDrink" class="selectcheckedIcon">
+          Uma bebida <img src="./images/checked.png" />
+        </p>
+        <p id="checkedDessert" class="selectcheckedIcon">
+          E uma sobremesa <img src="./images/checked.png" />
+        </p>
+        <div id="modalOrder"></div>
       </div>
       <section id="lunche" onclick="modalOrder()">
         <h4 class="category">Lunches</h4>
         <div class="containerCard">
-
-          <div id="lunch1" class="card" onclick="selectFood(1, 'checkedIcon1', addPriceFood('priceFood1'))">
+          <div
+            id="lunch1"
+            class="card"
+            onclick="selectFood(1, 'checkedIcon1', addPriceFood('priceFood1'))"
+          >
             <figure>
-              <img class="snackImage" src="images/xsalada.jpg" alt="hamburguer x salada" />
+              <img
+                class="snackImage"
+                src="images/xsalada.jpg"
+                alt="hamburguer x salada"
+              />
             </figure>
             <h3 id="name1">X Salada</h3>
             <p>Brioche bread, beef steak, 150g, salad and cheese</p>
             <p id="priceFood1">R$ 10,90</p>
-            <img id="checkedIcon1" class="checkedIconHide" src="./images/checked.png" alt="selected item symbol">
+            <div>
+              <img
+                id="checkedIcon1"
+                class="checkedIconHide"
+                src="./images/checked.png"
+                alt="selected item symbol"
+              />
+            </div>
           </div>
 
-          <div id="lunch2" class="card" onclick="selectFood(2, 'checkedIcon2', addPriceFood('priceFood2'))">
+          <div
+            id="lunch2"
+            class="card"
+            onclick="selectFood(2, 'checkedIcon2', addPriceFood('priceFood2'))"
+          >
             <figure>
               <img src="images/cheddarburguer.jpg" alt="example image" />
             </figure>
             <h3 id="name2">Cheddar Burguer</h3>
             <p>Brioche bread, beef steak, 150g, salad and cheese</p>
             <p id="priceFood2">R$ 11,90</p>
-            <img id="checkedIcon2" class="checkedIconHide" src="./images/checked.png" alt="selected item symbol">
+            <div>
+              <img
+                id="checkedIcon2"
+                class="checkedIconHide"
+                src="./images/checked.png"
+                alt="selected item symbol"
+              />
+            </div>
           </div>
 
-          <div id="lunch3" class="card" onclick="selectFood(3, 'checkedIcon3', addPriceFood('priceFood3'))">
+          <div
+            id="lunch3"
+            class="card"
+            onclick="selectFood(3, 'checkedIcon3', addPriceFood('priceFood3'))"
+          >
             <figure>
               <img src="images/BigBurguer.jpg" alt="example image" />
             </figure>
             <h3 id="name3">Big Burguer</h3>
             <p>Brioche bread, beef steak, 150g, salad and cheese</p>
             <p id="priceFood3">R$ 10,90</p>
-            <img id="checkedIcon3" class="checkedIconHide" src="./images/checked.png" alt="selected item symbol">
+            <div>
+              <img
+                id="checkedIcon3"
+                class="checkedIconHide"
+                src="./images/checked.png"
+                alt="selected item symbol"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -70,80 +123,144 @@
       <section id="drink" onclick="modalOrder()">
         <h4 class="category">Bebidas</h4>
         <div class="containerCard">
-
-          <div id="drink1" class="card" onclick="selectDrink(1,'checkedIcon4', addPriceDrink('priceDrinks1'))">
+          <div
+            id="drink1"
+            class="card"
+            onclick="selectDrink(1,'checkedIcon4', addPriceDrink('priceDrinks1'))"
+          >
             <figure>
               <img src="/images/refrigerantes.jpg" alt="example image" />
             </figure>
             <h3 id="name4">Refrigerantes</h3>
             <p>Brioche bread, beef steak, 150g, salad and cheese</p>
             <p id="priceDrinks1">R$ 10,90</p>
-            <img id="checkedIcon4" class="checkedIconHide" src="./images/checked.png" alt="selected item symbol">
+            <div>
+              <img
+                id="checkedIcon4"
+                class="checkedIconHide"
+                src="./images/checked.png"
+                alt="selected item symbol"
+              />
+            </div>
           </div>
 
-          <div id="drink2" class="card" onclick="selectDrink(2, 'checkedIcon5', addPriceDrink('priceDrinks2'))">
+          <div
+            id="drink2"
+            class="card"
+            onclick="selectDrink(2, 'checkedIcon5', addPriceDrink('priceDrinks2'))"
+          >
             <figure>
               <img src="/images/sucos.jpg" alt="example image" />
             </figure>
             <h3 id="name5">Sucos</h3>
             <p>Brioche bread, beef steak, 150g, salad and cheese</p>
             <p id="priceDrinks2">R$ 10,60</p>
-            <img id="checkedIcon5" class="checkedIconHide" src="./images/checked.png" alt="selected item symbol">
+            <div>
+              <img
+                id="checkedIcon5"
+                class="checkedIconHide"
+                src="./images/checked.png"
+                alt="selected item symbol"
+              />
+            </div>
           </div>
 
-          <div id="drink3" class="card" onclick="selectDrink(3, 'checkedIcon6', addPriceDrink('priceDrinks3'))">
+          <div
+            id="drink3"
+            class="card"
+            onclick="selectDrink(3, 'checkedIcon6', addPriceDrink('priceDrinks3'))"
+          >
             <figure>
               <img src="images/chop.jpg" alt="example image" />
             </figure>
             <h3 id="name6">Chop</h3>
             <p>Brioche bread, beef steak, 150g, salad and cheese</p>
             <p id="priceDrinks3">R$ 10,50</p>
-            <img id="checkedIcon6" class="checkedIconHide" src="./images/checked.png" alt="selected item symbol">
+            <div>
+              <img
+                id="checkedIcon6"
+                class="checkedIconHide"
+                src="./images/checked.png"
+                alt="selected item symbol"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="dessert" onclick="modalOrder()" >
+      <section id="dessert" onclick="modalOrder()">
         <h4 class="category">Sobremesas</h4>
         <div class="containerCard">
-
-          <div id="dessert1" class="card" onclick="selectDessert(1, 'checkedIcon7', addPriceDessert('priceDessert1'))">
+          <div
+            id="dessert1"
+            class="card"
+            onclick="selectDessert(1, 'checkedIcon7', addPriceDessert('priceDessert1'))"
+          >
             <figure>
-              <img src="image.jpg" alt="example image" />
+              <img src="images/panquemorango.jpg" alt="example image" />
             </figure>
-            <h3 id="name7">Hamburguer7</h3>
+            <h3 id="name7">Panqueca de Morango</h3>
             <p>Brioche bread, beef steak, 150g, salad and cheese</p>
             <p id="priceDessert1">R$ 10,30</p>
-            <img id="checkedIcon7" class="checkedIconHide" src="./images/checked.png" alt="selected item symbol">
+            <div>
+              <img
+                id="checkedIcon7"
+                class="checkedIconHide"
+                src="./images/checked.png"
+                alt="selected item symbol"
+              />
+            </div>
           </div>
 
-          <div id="dessert2" class="card" onclick="selectDessert(2, 'checkedIcon8', addPriceDessert('priceDessert2'))">
+          <div
+            id="dessert2"
+            class="card"
+            onclick="selectDessert(2, 'checkedIcon8', addPriceDessert('priceDessert2'))"
+          >
             <figure>
-              <img src="image.jpg" alt="example image" />
+              <img src="/images/boloChocolate.jpg" alt="example image" />
             </figure>
-            <h3 id="name8">Hamburguer8</h3>
+            <h3 id="name8">Bolo de Chocolate</h3>
             <p>Brioche bread, beef steak, 150g, salad and cheese</p>
             <p id="priceDessert2">R$ 10,90</p>
-            <img id="checkedIcon8" class="checkedIconHide" src="./images/checked.png" alt="selected item symbol">
+            <div>
+              <img
+                id="checkedIcon8"
+                class="checkedIconHide"
+                src="./images/checked.png"
+                alt="selected item symbol"
+              />
+            </div>
           </div>
 
-          <div id="dessert3" class="card" onclick="selectDessert(3, 'checkedIcon9', addPriceDessert('priceDessert3'))">
+          <div
+            id="dessert3"
+            class="card"
+            onclick="selectDessert(3, 'checkedIcon9', addPriceDessert('priceDessert3'))"
+          >
             <figure>
-              <img src="image.jpg" alt="example image" />
+              <img src="images/cupcakes.jpg" alt="example image" />
             </figure>
-            <h3 id="name9">Hamburguer9</h3>
+            <h3 id="name9">Cupcakes</h3>
             <p>Brioche bread, beef steak, 150g, salad and cheese</p>
             <p id="priceDessert3">R$ 10,80</p>
-            <img id="checkedIcon9" class="checkedIconHide" src="./images/checked.png" alt="selected item symbol">
+            <div>
+              <img
+                id="checkedIcon9"
+                class="checkedIconHide"
+                src="./images/checked.png"
+                alt="selected item symbol"
+              />
+            </div>
           </div>
         </div>
       </section>
-     
     </main>
     <div id="snackOrder"></div>
-    
-    <footer><h5>Developed by Andrei</h5></footer>
+
+    <footer>
+      <h5>Developed by Andrei Hoffmann Ferreira</h5>
+    </footer>
     <script src="./js/main.js"></script>
   </body>
 </html>
-
