@@ -24,10 +24,14 @@ let snackDessert = "";
 
 //show close order
 let counter = 0;
+let keyword1 = "";
+let keyword2 = "";
+let keyword3 = "";
 
 // function select food;
 function selectFood(food, id) {
   counter += 1;
+  keyword1 = "ok";
   if (food === 1) {
     lunch1.style.border = "2px solid green";
     lunch2.style.border = "none";
@@ -69,6 +73,7 @@ function selectFood(food, id) {
 // function select drink;
 function selectDrink(drink, id) {
   counter += 1;
+  keyword2 = "ok";
   if (drink === 1) {
     drink1.style.border = "2px solid green";
     drink2.style.border = "none";
@@ -110,6 +115,7 @@ function selectDrink(drink, id) {
 //function select dessert
 function selectDessert(dessert, id) {
   counter += 1;
+  keyword3 = "ok";
   if (dessert === 1) {
     dessert1.style.border = "2px solid green";
     dessert2.style.border = "none";
@@ -179,33 +185,42 @@ function addPriceDessert(dessert) {
 function sumPrices() {
   totalOrderAmount = priceLunch + priceDrink + priceDessert;
   console.log(totalOrderAmount);
-  return(totalOrderAmount);
+  return totalOrderAmount;
 }
 
+//function closed order
 function modalOrder() {
-  if (counter >= 3) {
+  if (
+    counter >= 3 &&
+    keyword1 === "ok" &&
+    keyword2 === "ok" &&
+    keyword3 === "ok"
+  ) {
     let modal = document.getElementById("modalOrder");
     modal.innerHTML = `<button onclick="modalCloseOder()">Fechar pedido</button>`;
   }
 }
 
 function modalCloseOder() {
-  sumPrices()
-  document.getElementById("snackOrder").innerHTML = `<div class="modalCloseOrder">
+  sumPrices();
+  document.getElementById(
+    "snackOrder"
+  ).innerHTML = `<div class="modalCloseOrder">
   <div class="modalConfirmOrder">
-    <h3> Confirmar pedido</h3>
+    <h2> Confirmar pedido</h2>
     <p>${snackLunch}      R$:${priceLunch}</p>
     <p>${snackDrink}      R$:${priceDrink}</p> 
     <p>${snackDessert}    R$:${priceDessert}</p> 
     <p>Total      R$:${totalOrderAmount}</p>
-    <div>
-    <button onclick="closedOder()">Confirmar</button> <button onclick="hideModalOrder()">Cancelar</button>
+    <div class="buttonContainer">
+    <button onclick="closedOder()">Confirmar</button> <button class="toGiveUp" onclick="hideModalOrder()">Cancelar</button>
     </div>   
   </div>
 </div>`;
-};
+}
 
-function closedOder(){
+//function finish order
+function closedOder() {
   let name = prompt("Informe seu nome: ");
   let adress = prompt("Informe seu endereço de entrega: ");
   let mensagem;
@@ -216,13 +231,13 @@ function closedOder(){
   Sobremesa: ${snackDessert}, no valor de R$:${priceDessert};
   O valor total do meu pedido foi R${totalOrderAmount};
   O endereço de entrega é ${adress}.
-  `
+  `;
 
-  window.open("https://wa.me/5532984179500?text="+encodeURI(mensagem));
+  window.open("https://wa.me/5532984179500?text=" + encodeURI(mensagem));
 }
 
-
-function hideModalOrder(){
-  document.getElementById("snackOrder").style.display = "none";
-};
-
+function hideModalOrder() {
+  setTimeout(function () {
+    window.location.reload();
+  }, 1000);
+}
